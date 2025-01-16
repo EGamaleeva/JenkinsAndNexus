@@ -9,12 +9,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'master', url: GIT_REPO_URL
+                   echo 'Maven package'
             }
         }
         stage('Build') {
             steps {
-
                 sh 'mvn clean package'
+                echo 'Maven package'
             }
         }
         stage('Upload to Nexus') {
