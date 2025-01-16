@@ -11,7 +11,7 @@ b3BlbnNz.....
 
 Ветку настраиваем или оставляем */master
 Script Path Jenkinsfile(если в корне репозитория)
-4. Jenkinsfile (Создаем в проекте в корне)
+4. Jenkinsfile (Создаем в проекте в корне) (nexus сохраняет в репо толькр файлы с разными версиями не забывай менять версии)
 5. webhook в GitHub
 В репозитории открываем Settings -> Webhooks
 Payload URL укажите URL вашего Jenkins (например, https://6706-195-123-218-164.ngrok-free.app/github-webhook/ (Ngrok для тестирования))
