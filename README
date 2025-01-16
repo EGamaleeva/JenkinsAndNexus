@@ -1,0 +1,20 @@
+1. Установить Jenkins
+2. Установить Nexus(проще в докере развернуть)
+3. Jenkins создаем pipeline
+GitHub hook trigger for GITScm polling(Ставим галочку если работаем нужен webhook)
+Pipeline script from SCM
+git@github.com:EGamaleeva/JenkinsAndNexus.git (SSH)
+Credentials : +ADD или username git , приватный ключ (Полностью)
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNz.....
+-----END OPENSSH PRIVATE KEY-----
+
+Ветку настраиваем или оставляем */master
+Script Path Jenkinsfile(если в корне репозитория)
+4. Jenkinsfile (Создаем в проекте в корне)
+5. webhook в GitHub
+В репозитории открываем Settings -> Webhooks
+Payload URL укажите URL вашего Jenkins (например, https://6706-195-123-218-164.ngrok-free.app/github-webhook/ (Ngrok для тестирования))
+Content type application/json
+Enable SSL verification(галочка)
+Just the push event(галочка усведомления после пуша)

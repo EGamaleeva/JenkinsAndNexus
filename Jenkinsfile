@@ -26,7 +26,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: NEXUS_URL,
                     groupId: 'com.example',
-                    version: '1.0.0',
+                    version: '1.1.0',
                     repository: 'maven-releases',
                     credentialsId: NEXUS_CREDENTIALS_ID,
                     artifacts: [
