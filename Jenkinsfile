@@ -13,8 +13,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-
                 sh 'mvn clean package'
+                echo 'Maven package'
             }
         }
         stage('Upload to Nexus') {
