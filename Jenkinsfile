@@ -14,7 +14,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean'
+                sh 'mvn package'
                 echo 'Maven package'
             }
         }
@@ -30,7 +31,7 @@ pipeline {
                     repository: 'maven-releases',
                     credentialsId: NEXUS_CREDENTIALS_ID,
                     artifacts: [
-                        [artifactId: 'my-app', classifier: '', file: 'target/my-app-1.0.0.jar', type: 'jar']
+                        [artifactId: 'my-app', classifier: '', file: 'target/Jenkins-1.0-SNAPSHOT.jar', type: 'jar']
                     ]
                 )
             }
