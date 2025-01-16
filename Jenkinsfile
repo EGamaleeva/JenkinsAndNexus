@@ -21,7 +21,6 @@ pipeline {
         }
         stage('Upload to Nexus') {
             steps {
-
                 nexusArtifactUploader(
                     nexusVersion: 'nexus3',
                     protocol: 'http',
